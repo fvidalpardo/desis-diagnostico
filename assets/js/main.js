@@ -11,8 +11,7 @@ document.getElementById("bodega").addEventListener("change", function () {
   fetch(`api/get_sucursales.php?bodega_id=${this.value}`)
     .then((res) => res.json())
     .then((data) => {
-      sucursalSelect.innerHTML =
-        '<option value="">Seleccione Sucursal</option>';
+      sucursalSelect.innerHTML = '<option value=""></option>';
       data.forEach((s) => {
         sucursalSelect.innerHTML += `<option value="${s.id}">${s.nombre}</option>`;
       });

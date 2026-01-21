@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label for="bodega">Bodega</label>
                 <select name="bodega" id="bodega">
-                    <option value="">Seleccione Bodega</option>
+                    <option value=""></option>
                     <?php
                     $stmt = $db->query("SELECT * FROM bodegas");
                     while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -35,13 +35,13 @@
             <div class="form-group">
                 <label for="sucursal">Sucursal</label>
                 <select name="sucursal" id="sucursal" disabled>
-                    <option value="">Seleccione primero una bodega</option>
+                    <option value=""></option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="moneda">Moneda</label>
                 <select name="moneda" id="moneda">
-                <option value="">Seleccione Moneda</option>
+                <option value=""></option>
                 <?php
                 $stmt = $db->query("SELECT * FROM           monedas");
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
